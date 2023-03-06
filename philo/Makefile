@@ -6,7 +6,7 @@
 #    By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/02 18:39:46 by rrhnizar          #+#    #+#              #
-#    Updated: 2023/03/03 15:37:31 by rrhnizar         ###   ########.fr        #
+#    Updated: 2023/03/06 22:27:13 by rrhnizar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ RFLAGS = -Wall -Werror -Wextra -I.
 
 CC = cc ${RFLAGS}
 
-SRCM = philo.c 
+SRCM = philo.c check_arg.c
 
 OBJM = ${SRCM:.c=.o}
 
@@ -25,7 +25,7 @@ OBJM = ${SRCM:.c=.o}
 
 all : ${Name}
 
-${Name} : ${OBJM}
+${Name} : ${OBJM} philo.h
 	${CC} ${OBJM} -o ${Name}
 	
 clean :

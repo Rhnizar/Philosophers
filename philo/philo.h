@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   philo.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/02 18:47:47 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/06 22:10:12 by rrhnizar         ###   ########.fr       */
+/*   Created: 2023/03/06 21:05:33 by rrhnizar          #+#    #+#             */
+/*   Updated: 2023/03/06 22:32:17 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <philo.h>
+#ifndef PHILO_H
+# define PHILO_H
 
-int	main(int argc, char **argv)
-{
-	if(cheack(argc, argv))
-		printf("just test\n");
-	else
-	{
-		write(2, "Error\n", 6);
-		return(1);
-	}
-	return (0);
-}
+# include <stdio.h>
+# include <pthread.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+int	cheack(int argc, char **argv);
+
+#endif
