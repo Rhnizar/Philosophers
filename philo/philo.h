@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:05:33 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/06 22:32:17 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/07 11:05:39 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 # include <unistd.h>
 
 int	cheack(int argc, char **argv);
+int	ft_atoi(char *str);
 
 #endif

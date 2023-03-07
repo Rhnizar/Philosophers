@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:07:51 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/06 22:19:26 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/07 10:57:51 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	arg_is_valid(char *str)
 	i = 0;
 	if (str[i] == '+')
 		i++;
-	while(str[i])
+	while (str[i])
 	{
 		if (str[i] >= '0' && str[i] <= '9')
 			i++;
@@ -65,7 +65,7 @@ int	cheack(int argc, char **argv)
 	{
 		while (argv[i])
 		{
-			if(arg_is_valid(argv[i]))
+			if (arg_is_valid(argv[i]))
 				i++;
 			else
 				return (0);
