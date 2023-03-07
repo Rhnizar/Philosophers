@@ -6,46 +6,22 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:47:47 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/07 11:19:43 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:47:59 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <philo.h>
-
-//////// this is task eating ////////
-
-void	*eating(void *x)
-{
-	(void)x;
-	printf("I'am eating !!\n");
-	return (NULL);
-}
-
-//////// this is task sleeping ////////
-
-void	*sleeping(void *x)
-{
-	(void)x;
-	printf("I'am sleeping !!\n");
-	return (NULL);
-}
-
-//////// this is task thinking ////////
-
-void	*thinking(void *x)
-{
-	(void)x;
-	printf("I'am thinking !!\n");
-	return (NULL);
-}
+#include "philo.h"
 
 ////////// create_thread ///////
 
 void	create_thread(int num_of_philo)
 {
-	pthread_t th[num_of_philo];
-	int	i;
+	pthread_t	*th;
+	int			i;
 
+	th = malloc(sizeof(pthread_t) * num_of_philo);
+	if (!th)
+		return ;
 	i = 0;
 	while (i != num_of_philo)
 		pthread_create(&th[i++], NULL, eating, NULL);
@@ -54,10 +30,31 @@ void	create_thread(int num_of_philo)
 		pthread_join(th[i++], NULL);
 }
 
+void	init(int argc, char **argv, t_philo *philo)
+{
+	if (argc == 5 || argc == 6)
+	{
+		philo->num_of_philo = ft_atoi(argv[1]);
+		philo->time_to_die = ft_atoi(argv[2]);
+		philo->time_to_eat = ft_atoi(argv[3]);
+		philo->time_to_sleep = ft_atoi(argv[4]);
+		philo->num_of_fork = philo->num_of_philo;
+		if (argc == 6)
+			philo->num_each_philo_eat = ft_atoi(argv[5]);
+		else
+			philo->num_each_philo_eat = 0;
+	}
+}
+
 int	main(int argc, char **argv)
 {
+	t_philo	philo;
+
 	if (cheack(argc, argv))
-		create_thread(ft_atoi(argv[1]));
+	{
+		init(argc, argv, &philo);
+		create_thread(philo.num_of_philo);
+	}
 	else
 	{
 		write(2, "Error\n", 6);

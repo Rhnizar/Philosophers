@@ -6,11 +6,11 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:07:51 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/07 10:57:51 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:39:06 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"philo.h"
+#include "philo.h"
 
 int	ft_atoi(char *str)
 {
