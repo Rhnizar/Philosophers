@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:05:33 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/07 12:53:38 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:58:52 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <pthread.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/time.h>
 
 int		cheack(int argc, char **argv);
 int		ft_atoi(char *str);

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 11:26:21 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/07 12:04:46 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/07 12:12:50 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*Green(void *x)
 
 int main(int argc, char **argv) 
 {
-	if(argc == 3)
+	if(argc == 2)
 	{
 		pthread_t	th[atoi(argv[1])];
 		int i = 0;
