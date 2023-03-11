@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 21:05:33 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/07 12:58:52 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/11 13:14:38 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ typedef struct s_philo
 	int	time_to_sleep;
 	int	num_each_philo_eat;
 	int	num_of_fork;
+	int	id_philo;
 }				t_philo;
+
+//////////// struct t9dar tkhdme //////
+
+typedef struct s_philosopher
+{
+	int	index_in_arr;
+	int	forks;
+	int id_or_num_phi;
+}				t_philosopher;
 
 #endif
