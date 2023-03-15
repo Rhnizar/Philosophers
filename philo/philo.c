@@ -6,23 +6,25 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 18:47:47 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/11 14:16:22 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/15 18:18:25 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
 ///////////// initialization ///////////
+
 void	init(int argc, char **argv, t_philo *philo)
 {
 	if (argc == 5 || argc == 6)
 	{
-		philo->id_philo = 0;
 		philo->num_of_philo = ft_atoi(argv[1]);
 		philo->time_to_die = ft_atoi(argv[2]);
 		philo->time_to_eat = ft_atoi(argv[3]);
 		philo->time_to_sleep = ft_atoi(argv[4]);
-		philo->num_of_fork = philo->num_of_philo;
+		philo->ph.forks = 0;
+		philo->t.start_time = 0;
+		philo->t.current_time = 0;
 		if (argc == 6)
 			philo->num_each_philo_eat = ft_atoi(argv[5]);
 		else
@@ -30,22 +32,33 @@ void	init(int argc, char **argv, t_philo *philo)
 	}
 }
 
-
 /////////// all tasks the threads ///////////
 
 void	*task(void	*philo)
 {
 	(void)philo;
 	t_philo *philos;
-	
 	philos = (t_philo *)philo;
-	
-	printf("Philosopher %d is	%s\n", ++(philos->id_philo), "eating");
+	gettimeofday(&(philos->t.tv), NULL);
+	if(philos->t.start_time == 0)
+		philos->t.start_time = (philos->t.tv.tv_sec / 1000) + (philos->t.tv.tv_usec * 1000);
+	philos->t.current_time = (philos->t.tv.tv_sec / 1000) + (philos->t.tv.tv_usec * 1000);
+	printf("%ld\n", philos->t.current_time - philos->t.start_time);
 	return (NULL);
 }
+/////////////// full arr philosopher //////
+// void	full_arr(int **arr, t_philo *philo)
+// {
+// 	int i;
+// 	int	j;
+
+// 	i = 0;
+// 	j = 0;
+	
+// 	**arr = malloc(sizeof(int) * philo->num_of_philo);
+// }
 ////////// create_thread ///////
 
-// void	create_thread(int num_of_philo)
 void	create_thread(t_philo *philo)
 {
 	pthread_t	*th;
@@ -55,16 +68,22 @@ void	create_thread(t_philo *philo)
 	if (!th)
 		return ;
 	i = 0;
-	printf("after %d\n", philo->num_of_philo);
 	while (i != philo->num_of_philo)
-		pthread_create(&th[i++], NULL, task, philo);
-	printf("before %d\n", philo->num_of_philo);
+	{
+		philo->ph.id_philo = i;
+		philo->ph.right_fork_id = (philo->ph.id_philo + 1) % philo->num_of_philo;
+		philo->ph.left_fork_id = (philo->ph.id_philo + philo->num_of_philo - 1) % philo->num_of_philo;
+		// printf("===> right_fork : %d\n", philo->ph.right_fork_id);
+		// printf("===> left_fork : %d\n", philo->ph.left_fork_id);
+		// exit(1);
+		pthread_create(&th[i], NULL, task, philo);
+		// usleep(100);
+		i++;
+	}
 	i = 0;
 	while (i != philo->num_of_philo)
 		pthread_join(th[i++], NULL);
 }
-
-
 
 int	main(int argc, char **argv)
 {
@@ -72,8 +91,8 @@ int	main(int argc, char **argv)
 
 	if (cheack(argc, argv))
 	{
+		
 		init(argc, argv, &philo);
-		// create_thread(philo.num_of_philo);
 		create_thread(&philo);
 	}
 	else
