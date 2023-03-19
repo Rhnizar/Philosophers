@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   todo                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/17 13:13:11 by rrhnizar          #+#    #+#             */
+/*   Updated: 2023/03/17 17:27:11 by rrhnizar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//////// 9ra race of data && deadlock ///////
+
+////////////// a ra kola philo  3ando struct dyalo ola array dyalo ///////// 
+///ghadi nhawl nkhdme bi matrix ====> kol philo ghadi n3tih daxi liyhtaj ====> matric the philosophers ==>
+
+
+/////////////// full arr philosopher //////
+// void	full_arr(int **arr, t_philo *philo)
+// {
+// 	int i;
+// 	int	j;
+
+// 	i = 0;
+// 	j = 0;
+	
+// 	**arr = malloc(sizeof(int) * philo->num_of_philo);
+// }
+////////// create_thread ///////
