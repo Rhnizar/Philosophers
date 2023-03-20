@@ -6,15 +6,16 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 13:06:59 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/03/19 17:26:33 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:07:32 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	init(int argc, char **argv, t_philo *philo)
+void	init(int argc, char **argv)
 {
-	
+	(void)argc;
+	(void)argv;
 	// gettimeofday(&(philo->t.tv), NULL);
 	// philo->num_of_philo = ft_atoi(argv[1]);
 	// philo->time_to_die = (ft_atoi(argv[2])) * 1000;
