@@ -1,1 +1,12 @@
-# Philosophers
+![Dining_philosophers1](https://github.com/Rhnizar/Philosophers/assets/64803406/f7c47e82-47f6-4f1a-83ac-a49deacce55f)
+![en subject-01](https://github.com/Rhnizar/Philosophers/assets/64803406/1a8ae106-5ae7-4fa6-ac41-c69167f7878a)
+![en subject-02](https://github.com/Rhnizar/Philosophers/assets/64803406/14e02f89-2cec-47ed-abd6-132227755165)
+![en subject-03](https://github.com/Rhnizar/Philosophers/assets/64803406/34358006-b168-4898-b3e2-f0d9970e5fff)
+![en subject-04](https://github.com/Rhnizar/Philosophers/assets/64803406/8873c373-e9c8-4922-be50-1c59601eba12)
+![en subject-05](https://github.com/Rhnizar/Philosophers/assets/64803406/733742ec-1991-45b2-8bf3-07cefde172fc)
+![en subject-06](https://github.com/Rhnizar/Philosophers/assets/64803406/8ce0297a-b7cf-4df5-9f6d-79d979e88d97)
+![en subject-07](https://github.com/Rhnizar/Philosophers/assets/64803406/db8382c4-3b34-4a00-867a-6f15e5822f72)
+![en subject-08](https://github.com/Rhnizar/Philosophers/assets/64803406/d7ec5cba-f4f0-4df4-b5c5-de7342fb5a6f)
+![en subject-09](https://github.com/Rhnizar/Philosophers/assets/64803406/033e625f-00b3-493a-a298-d29e025469d2)
+![en subject-10](https://github.com/Rhnizar/Philosophers/assets/64803406/8ef40151-ae61-4793-a4ae-5778b243011b)
+![en subject-11](https://github.com/Rhnizar/Philosophers/assets/64803406/7d46319c-6050-4cc2-b529-900bcc7b777e)
